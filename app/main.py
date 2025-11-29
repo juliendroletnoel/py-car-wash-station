@@ -21,12 +21,12 @@ class CarWashStation (object):
 
         for car in cars:
             if car.clean_mark < self.clean_power:
-                total_price += self.calculating_washing_price(car)
+                total_price += self.calculate_washing_price(car)
                 self.wash_single_car(car)
 
         return total_price
 
-    def calculating_washing_price(self, car: Car) -> float:
+    def calculate_washing_price(self, car: Car) -> float:
         price = car.comfort_class \
             * (self.clean_power - car.clean_mark) \
             * (self.avergage_rating / self.distance_from_city_center)
