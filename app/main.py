@@ -5,6 +5,7 @@ class Car (object):
         self.clean_mark = clean_mark
         self.brand = brand
 
+
 class CarWashStation (object):
     # write your code here
     def __init__(self, distance_from_city_center: float, clean_power: int, average_rating: float, count_of_ratings: int) -> None:
@@ -20,7 +21,7 @@ class CarWashStation (object):
             if car.clean_mark < self.clean_power:
                 total_price += self.calculating_washing_price(car)
                 self.wash_single_car(car)
-    
+
         return total_price
 
     def calculating_washing_price(self, car: Car) -> float:
